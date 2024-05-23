@@ -48,50 +48,50 @@ const NewArrivals = () => {
   };
   return (
     <div className="w-full pb-16">
-      <Heading heading="New Arrivals" />
+      <Heading heading="새 상품" />
       <Slider {...settings}>
         <div className="px-2">
           <Product
             _id="100001"
             img={newArrOne}
-            productName="Round Table Clock"
-            price="44.00"
+            productName="XX전자 86QNED80KRA"
+            price="10"
             color="Black"
             badge={true}
-            des="Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic excepturi quibusdam odio deleniti reprehenderit facilis."
+            des="NewArrivals"
           />
         </div>
         <div className="px-2">
           <Product
             _id="100002"
             img={newArrTwo}
-            productName="Smart Watch"
-            price="250.00"
-            color="Black"
+            productName="Axxxx Watch"
+            price="12"
+            color="White"
             badge={true}
-            des="Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic excepturi quibusdam odio deleniti reprehenderit facilis."
+            des="NewArrivals"
           />
         </div>
         <div className="px-2">
           <Product
             _id="100003"
             img={newArrThree}
-            productName="cloth Basket"
-            price="80.00"
+            productName="XX전자 QLED KQ85QC70AFXKR"
+            price="13"
             color="Mixed"
             badge={true}
-            des="Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic excepturi quibusdam odio deleniti reprehenderit facilis."
+            des="NewArrivals"
           />
         </div>
         <div className="px-2">
           <Product
             _id="100004"
             img={newArrFour}
-            productName="Funny toys for babies"
+            productName="트윈프레셔 마스터셰프 CRP-LHTR0610FW"
             price="60.00"
             color="Mixed"
             badge={false}
-            des="Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic excepturi quibusdam odio deleniti reprehenderit facilis."
+            des="NewArrivals"
           />
         </div>
         <div className="px-2">
@@ -102,7 +102,7 @@ const NewArrivals = () => {
             price="60.00"
             color="Mixed"
             badge={false}
-            des="Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic excepturi quibusdam odio deleniti reprehenderit facilis."
+            des="NewArrivals"
           />
         </div>
       </Slider>

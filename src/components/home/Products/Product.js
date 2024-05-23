@@ -29,7 +29,7 @@ const Product = (props) => {
   };
 
   const handleWishList = () => {
-    toast.success("Product add to wish List");
+    toast.success("장바구니 추가 완료");
     setWishList(wishList.push(props));
     console.log(wishList);
   };
@@ -45,7 +45,7 @@ const Product = (props) => {
         <div className="w-full h-32 absolute bg-white -bottom-[130px] group-hover:bottom-0 duration-700">
           <ul className="w-full h-full flex flex-col items-end justify-center gap-2 font-titleFont px-2 border-l border-r">
             <li className="text-[#767676] hover:text-primeColor text-sm font-normal border-b-[1px] border-b-gray-200 hover:border-b-primeColor flex items-center justify-end gap-2 hover:cursor-pointer pb-1 duration-300 w-full">
-              Compare
+              {/* 여백 */}
               <span>
                 <GiReturnArrow />
               </span>
@@ -66,7 +66,7 @@ const Product = (props) => {
               }
               className="text-[#767676] hover:text-primeColor text-sm font-normal border-b-[1px] border-b-gray-200 hover:border-b-primeColor flex items-center justify-end gap-2 hover:cursor-pointer pb-1 duration-300 w-full"
             >
-              Add to Cart
+              장바구니
               <span>
                 <FaShoppingCart />
               </span>
@@ -75,7 +75,7 @@ const Product = (props) => {
               onClick={handleProductDetails}
               className="text-[#767676] hover:text-primeColor text-sm font-normal border-b-[1px] border-b-gray-200 hover:border-b-primeColor flex items-center justify-end gap-2 hover:cursor-pointer pb-1 duration-300 w-full"
             >
-              View Details
+              상세페이지
               <span className="text-lg">
                 <MdOutlineLabelImportant />
               </span>
@@ -84,7 +84,7 @@ const Product = (props) => {
               onClick={handleWishList}
               className="text-[#767676] hover:text-primeColor text-sm font-normal border-b-[1px] border-b-gray-200 hover:border-b-primeColor flex items-center justify-end gap-2 hover:cursor-pointer pb-1 duration-300 w-full"
             >
-              Add to Wish List
+              찜
               <span>
                 <BsSuitHeartFill />
               </span>

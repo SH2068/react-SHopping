@@ -96,7 +96,7 @@ const Header = () => {
                         onClick={() => setCategory(!category)}
                         className="flex justify-between text-base cursor-pointer items-center font-titleFont mb-2"
                       >
-                        Shop by Category{" "}
+                        카테고리{" "}
                         <span className="text-lg">{category ? "-" : "+"}</span>
                       </h1>
                       {category && (
@@ -106,11 +106,11 @@ const Header = () => {
                           transition={{ duration: 0.4 }}
                           className="text-sm flex flex-col gap-1"
                         >
-                          <li className="headerSedenavLi">New Arrivals</li>
-                          <li className="headerSedenavLi">Gudgets</li>
-                          <li className="headerSedenavLi">Accessories</li>
-                          <li className="headerSedenavLi">Electronics</li>
-                          <li className="headerSedenavLi">Others</li>
+                          <li className="headerSedenavLi">신규 제품</li>
+                          <li className="headerSedenavLi">의류</li>
+                          <li className="headerSedenavLi">액세서리</li>
+                          <li className="headerSedenavLi">전자 제품</li>
+                          <li className="headerSedenavLi">가전 제품</li>
                         </motion.ul>
                       )}
                     </div>
@@ -119,7 +119,7 @@ const Header = () => {
                         onClick={() => setBrand(!brand)}
                         className="flex justify-between text-base cursor-pointer items-center font-titleFont mb-2"
                       >
-                        Shop by Brand
+                        텍스트문구
                         <span className="text-lg">{brand ? "-" : "+"}</span>
                       </h1>
                       {brand && (
@@ -129,11 +129,11 @@ const Header = () => {
                           transition={{ duration: 0.4 }}
                           className="text-sm flex flex-col gap-1"
                         >
-                          <li className="headerSedenavLi">New Arrivals</li>
-                          <li className="headerSedenavLi">Gudgets</li>
-                          <li className="headerSedenavLi">Accessories</li>
-                          <li className="headerSedenavLi">Electronics</li>
-                          <li className="headerSedenavLi">Others</li>
+                          <li className="headerSedenavLi">신규 제품</li>
+                          <li className="headerSedenavLi">의류</li>
+                          <li className="headerSedenavLi">액세서리</li>
+                          <li className="headerSedenavLi">전자 제품</li>
+                          <li className="headerSedenavLi">가전 제품</li>
                         </motion.ul>
                       )}
                     </div>

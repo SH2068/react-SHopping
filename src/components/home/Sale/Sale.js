@@ -18,14 +18,14 @@ const Sale = () => {
         <div className="text-left h-140 md:h-200 lg:h-260 w-full mx-4 ">
           <div className="mx-8">
             <h2 className="text-4xl md:text-5xl lg:text-5xl font-bold mb-6">
-              Imprimante sales
+              세일문구
             </h2>
             <p className="text-lg md:text-xl lg:text-2xl mb-6">
-              Up to{" "}
+              최대{" "}
               <span className="text-4xl md:text-5xl lg:text-5xl font-bold">
-                30%
+                80%
               </span>{" "}
-              sales for all impriamnte{" "}
+              대박세일{" "}
             </p>
             <div className=" mb-8">
               <ShopNow />

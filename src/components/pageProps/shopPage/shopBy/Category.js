@@ -16,20 +16,20 @@ const Category = () => {
   const category = [
     {
       _id: 9006,
-      title: "Imprimante",
+      title: "프린트",
     },
     {
       _id: 9007,
-      title: "Encre",
+      title: "잉크",
     },
     {
       _id: 9008,
-      title: "Ruban",
+      title: "장식품",
     },
-    {
-      _id: 9009,
-      title: "Bac de dechet",
-    },
+    // {
+    //   _id: 9009,
+    //   title: "",
+    // },
   ];
 
   const handleToggleCategory = (category) => {
@@ -38,7 +38,7 @@ const Category = () => {
 
   return (
     <div className="w-full">
-      <NavTitle title="Shop by Category" icons={true} />
+      <NavTitle title="카테고리" icons={true} />
       <div>
         <ul className="flex flex-col gap-4 text-sm lg:text-base text-[#767676]">
           {category.map((item) => (

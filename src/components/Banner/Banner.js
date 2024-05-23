@@ -1,34 +1,31 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import Slider from "react-slick";
-import {
-  bannerImgOne,
-  bannerImgTwo,
-  bannerImgThree,
-} from "../../assets/images";
+import { bannerImgOne } from "../../assets/images";
+// import { bannerImgTwo, bannerImgThree } from "../../assets/images/banner";
 import Image from "../designLayouts/Image";
 
 const CustomSlide = ({ Subtext, imgSrc, text, buttonLink, buttonText }) => (
   <div
     style={{
       position: "relative",
-      backgroundColor: "#F5F5F3", // Gray background color
+      backgroundColor: "#eee", // 색상 변경
       display: "flex",
       justifyContent: "center",
-      alignItems: "center", // Center vertically
+      alignItems: "center", 
     }}
   >
     <div
       style={{
-        maxWidth: "450px", // Adjust the maxWidth as needed
-        marginRight: "100px", // Add margin between text/button and image
+        maxWidth: "450px",
+        marginRight: "100px", 
       }}
     >
       <h1
         style={{
           marginBottom: "15px",
-          fontSize: "2.5rem", // Adjust the font size as needed
-          color: "#000", // Black color
+          fontSize: "2.5rem", 
+          color: "#000", 
           fontWeight: "700",
         }}
       >
@@ -37,8 +34,8 @@ const CustomSlide = ({ Subtext, imgSrc, text, buttonLink, buttonText }) => (
       <p
         style={{
           marginBottom: "25px",
-          fontSize: "1.5rem", // Adjust the font size as needed
-          color: "#666", // Gray color
+          fontSize: "1.5rem", 
+          color: "#666",
         }}
       >
         {Subtext}
@@ -152,30 +149,30 @@ const Banner = () => {
   const slides = [
     {
       imgSrc: bannerImgOne,
-      text: "Enhance Your Printing Experience",
+      text: "트렌디한 아이템을 만나는 가장 쉬운 방법",
       Subtext:
-        "Explore our premium printers and consumables for exceptional results",
+        "매직쉐프 업소용 전자레인지 대용량 스텐 편의점 30리터",
       buttonLink: "/offer",
-      buttonText: "Shop Now",
+      buttonText: "구매하기",
     },
     {
       imgSrc: bannerImgOne,
-      text: "Quality Printing Solutions",
+      text: "당신의 일상을 빛나게 할 쇼핑",
       Subtext:
-        "Discover our wide range of printers and consumables designed for professional printing needs.",
+        "완벽한 스타일, 손쉽게 만나보세요",
       buttonLink: "/shop",
-      buttonText: "About-us",
+      buttonText: "구매하기",
     },
     {
       imgSrc: bannerImgOne,
-      text: "Efficiency Redefined",
+      text: "럭셔리한 일상, 당신에게 선물하세요",
       Subtext:
-        "Maximize productivity with our advanced printers and high-quality consumables. ",
+        "스타일의 시작, 여기서부터",
       buttonLink: "/contact",
-      buttonText: "Contact-us",
+      buttonText: "구매하기",
     },
 
-    // Add more slides as needed
+      // 슬라이드
   ];
   return (
     <div className="w-full bg-white">

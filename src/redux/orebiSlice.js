@@ -9,7 +9,7 @@ const initialState = {
 };
 
 export const orebiSlice = createSlice({
-  name: "orebi",
+  name: "SHooping",
   initialState,
   reducers: {
     addToCart: (state, action) => {
@@ -21,8 +21,8 @@ export const orebiSlice = createSlice({
       } else {
         state.products.push(action.payload);
       }
-      // Dispatch a success toast
-      toast.success("Product added to cart");
+  
+      toast.success("장바구니 추가 완료");
     },
     increaseQuantity: (state, action) => {
       const item = state.products.find(
@@ -30,7 +30,6 @@ export const orebiSlice = createSlice({
       );
       if (item) {
         item.quantity++;
-        // Dispatch a success toast
       }
     },
     drecreaseQuantity: (state, action) => {
@@ -41,19 +40,18 @@ export const orebiSlice = createSlice({
         item.quantity = 1;
       } else {
         item.quantity--;
-        // Dispatch a success toast
       }
     },
     deleteItem: (state, action) => {
       state.products = state.products.filter(
         (item) => item._id !== action.payload
       );
-      // Dispatch a success toast
-      toast.error("Product removed from cart");
+
+      toast.error("장바구니 품목 제외 완료");
     },
     resetCart: (state) => {
       state.products = [];
-      // Dispatch a success toast
+
     },
 
     toggleBrand: (state, action) => {

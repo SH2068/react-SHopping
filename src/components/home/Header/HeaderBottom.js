@@ -40,7 +40,7 @@ const HeaderBottom = () => {
   }, [searchQuery]);
 
   return (
-    <div className="w-full bg-[#F5F5F3] relative">
+    <div className="w-full bg-[#61dafb] relative">
       <div className="max-w-container mx-auto">
         <Flex className="flex flex-col lg:flex-row items-start lg:items-center justify-between w-full px-4 pb-4 lg:pb-0 h-full lg:h-24">
           <div
@@ -49,7 +49,7 @@ const HeaderBottom = () => {
             className="flex h-14 cursor-pointer items-center gap-2 text-primeColor"
           >
             <HiOutlineMenuAlt4 className="w-5 h-5" />
-            <p className="text-[14px] font-normal">Shop by Category</p>
+            <p className="text-[14px] font-normal">카테고리</p>
 
             {show && (
               <motion.ul
@@ -60,23 +60,23 @@ const HeaderBottom = () => {
               >
                 <Link to={"category/imprimante"}>
                   <li className="text-gray-400 px-4 py-1 border-b-[1px] border-b-gray-400 hover:border-b-white hover:text-white duration-300 cursor-pointer">
-                    Imprimante
+                    Print
                   </li>
                 </Link>
 
                 <Link to={"category/ancre"}>
                   <li className="text-gray-400 px-4 py-1 border-b-[1px] border-b-gray-400 hover:border-b-white hover:text-white duration-300 cursor-pointer">
-                    ancre
+                    잉크
                   </li>
                 </Link>
                 <Link to={"category/Ruban"}>
                   <li className="text-gray-400 px-4 py-1 border-b-[1px] border-b-gray-400 hover:border-b-white hover:text-white duration-300 cursor-pointer">
-                    ruban
+                    포장기기
                   </li>
                 </Link>
                 <Link to={"category/Bac"}>
                   <li className="text-gray-400 px-4 py-1 border-b-[1px] border-b-gray-400 hover:border-b-white hover:text-white duration-300 cursor-pointer">
-                    Bac de dechet
+                    상자
                   </li>
                 </Link>
               </motion.ul>
@@ -88,7 +88,7 @@ const HeaderBottom = () => {
               type="text"
               onChange={handleSearch}
               value={searchQuery}
-              placeholder="Search your products here"
+              placeholder="제품 검색"
             />
             <FaSearch className="w-5 h-5" />
             {searchQuery && (
@@ -155,13 +155,13 @@ const HeaderBottom = () => {
                     Login
                   </li>
                 </Link>
-                <Link onClick={() => setShowUser(false)} to="/signup">
+                {/* <Link onClick={() => setShowUser(false)} to="/signup">
                   <li className="text-gray-400 px-4 py-1 border-b-[1px] border-b-gray-400 hover:border-b-white hover:text-white duration-300 cursor-pointer">
-                    Sign Up
+                    로그인
                   </li>
-                </Link>
+                </Link> */}
                 <li className="text-gray-400 px-4 py-1 border-b-[1px] border-b-gray-400 hover:border-b-white hover:text-white duration-300 cursor-pointer">
-                  Profile
+                  프로필
                 </li>
                 <li className="text-gray-400 px-4 py-1 border-b-[1px] border-b-gray-400  hover:border-b-white hover:text-white duration-300 cursor-pointer">
                   Others
@@ -176,7 +176,7 @@ const HeaderBottom = () => {
                 </span>
               </div>
             </Link>
-            <BsSuitHeartFill />
+            {/* <BsSuitHeartFill /> */}
           </div>
         </Flex>
       </div>

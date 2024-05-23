@@ -12,23 +12,23 @@ const Brand = () => {
   const dispatch = useDispatch();
 
   const brands = [
-    {
-      _id: 900,
-      title: "Pantum",
-    },
-    {
-      _id: 901,
-      title: "Hp",
-    },
-    {
-      _id: 902,
-      title: "Epson",
-    },
+    // {
+    //   _id: 900,
+    //   title: "PANTUM",
+    // },
+    // {
+    //   _id: 901,
+    //   title: "XX",
+    // },
+    // {
+    //   _id: 902,
+    //   title: "Un",
+    // },
 
-    {
-      _id: 903,
-      title: "Ricoh",
-    },
+    // {
+    //   _id: 903,
+    //   title: "XX",
+    // },
   ];
 
   const handleToggleBrand = (brand) => {
@@ -41,7 +41,7 @@ const Brand = () => {
         onClick={() => setShowBrands(!showBrands)}
         className="cursor-pointer"
       >
-        <NavTitle title="Shop by Brand" icons={true} />
+        {/* <NavTitle title="브랜드" icons={true} /> */}
       </div>
       {showBrands && (
         <motion.div

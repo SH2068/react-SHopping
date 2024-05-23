@@ -6,30 +6,30 @@ import { FaDownload } from "react-icons/fa";
 
 const tabs = [
   {
-    id: "Fiche Technique",
-    label: "Fiche Technique",
+    id: "A",
+    label: "A",
   },
   {
-    id: "Description",
-    label: "Description",
+    id: "B",
+    label: "B",
     content:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic excepturi quibusdam odio deleniti reprehenderit facilis.",
+      "내구성 80 유지력 90",
   },
   {
-    id: "Video",
-    label: "Video",
+    id: "C",
+    label: "C",
     content: (
       <iframe
         width="560"
         height="315"
-        src="https://www.youtube.com/embed/watch?v=6e0yIRDVPlA&list=RD6e0yIRDVPlA&start_radio=1"
+        src="https://www.youtube.com/watch?v=c1U9jjVUjAA"
         title="YouTube Video"
         frameBorder="0"
         allowFullScreen
       ></iframe>
     ),
   },
-  // Add more tabs as needed
+  
 ];
 
 const ProductDetails = () => {
@@ -110,7 +110,7 @@ const ProductDetails = () => {
                           rel="noopener noreferrer"
                           className="text-white"
                         >
-                          Download PDF
+                         
                         </a>{" "}
                       </button>
                     </div>

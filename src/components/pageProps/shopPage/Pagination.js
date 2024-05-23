@@ -7,7 +7,6 @@ import { paginationItems } from "../../../constants";
 const items = paginationItems;
 
 function Items({ currentItems, selectedBrands, selectedCategories }) {
-  // Filter items based on selected brands and categories
   const filteredItems = currentItems.filter((item) => {
     const isBrandSelected =
       selectedBrands.length === 0 ||
@@ -57,7 +56,7 @@ const Pagination = ({ itemsPerPage }) => {
 
   const handlePageClick = (event) => {
     const newOffset = (event.selected * itemsPerPage) % items.length;
-    const newStart = newOffset + 1; // Adjust the start index
+    const newStart = newOffset + 1; 
 
     setItemOffset(newOffset);
     setItemStart(newStart);

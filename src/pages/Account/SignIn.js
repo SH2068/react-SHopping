@@ -4,17 +4,16 @@ import { Link } from "react-router-dom";
 import { logoLight } from "../../assets/images";
 
 const SignIn = () => {
-  // ============= Initial State Start here =============
+
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  // ============= Initial State End here ===============
-  // ============= Error Msg Start here =================
+
   const [errEmail, setErrEmail] = useState("");
   const [errPassword, setErrPassword] = useState("");
 
-  // ============= Error Msg End here ===================
+
   const [successMsg, setSuccessMsg] = useState("");
-  // ============= Event Handler Start here =============
+
   const handleEmail = (e) => {
     setEmail(e.target.value);
     setErrEmail("");
@@ -23,18 +22,18 @@ const SignIn = () => {
     setPassword(e.target.value);
     setErrPassword("");
   };
-  // ============= Event Handler End here ===============
+
   const handleSignUp = (e) => {
     e.preventDefault();
 
     if (!email) {
-      setErrEmail("Enter your email");
+      setErrEmail("이메일이 없어요");
     }
 
     if (!password) {
-      setErrPassword("Create a password");
+      setErrPassword("비밀번호가 없어요");
     }
-    // ============== Getting the value ==============
+
     if (email && password) {
       setSuccessMsg(
         `Hello dear, Thank you for your attempt. We are processing to validate your access. Till then stay connected and additional assistance will be sent to you by your mail at ${email}`
@@ -52,9 +51,9 @@ const SignIn = () => {
           </Link>
           <div className="flex flex-col gap-1 -mt-1">
             <h1 className="font-titleFont text-xl font-medium">
-              Stay sign in for more
+              더 많은 정보는 로그인
             </h1>
-            <p className="text-base">When you sign in, you are with us!</p>
+            <p className="text-base">궁금하면 로그인</p>
           </div>
           <div className="w-[300px] flex items-start gap-3">
             <span className="text-green-500 mt-1">
@@ -62,11 +61,10 @@ const SignIn = () => {
             </span>
             <p className="text-base text-gray-300">
               <span className="text-white font-semibold font-titleFont">
-                Get started fast with OREBI
+                SHopping
               </span>
               <br />
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab omnis
-              nisi dolor recusandae consectetur!
+              로그인
             </p>
           </div>
           <div className="w-[300px] flex items-start gap-3">
@@ -75,11 +73,10 @@ const SignIn = () => {
             </span>
             <p className="text-base text-gray-300">
               <span className="text-white font-semibold font-titleFont">
-                Access all OREBI services
+                많은 서비스를 얻고싶으면?
               </span>
               <br />
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab omnis
-              nisi dolor recusandae consectetur!
+              로그인
             </p>
           </div>
           <div className="w-[300px] flex items-start gap-3">
@@ -88,27 +85,26 @@ const SignIn = () => {
             </span>
             <p className="text-base text-gray-300">
               <span className="text-white font-semibold font-titleFont">
-                Trusted by online Shoppers
+                하자없는 쇼핑몰
               </span>
               <br />
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab omnis
-              nisi dolor recusandae consectetur!
+              로그인
             </p>
           </div>
           <div className="flex items-center justify-between mt-10">
             <Link to="/">
               <p className="text-sm font-titleFont font-semibold text-gray-300 hover:text-white cursor-pointer duration-300">
-                © OREBI
+                SHopping
               </p>
             </Link>
             <p className="text-sm font-titleFont font-semibold text-gray-300 hover:text-white cursor-pointer duration-300">
-              Terms
+              정보
             </p>
             <p className="text-sm font-titleFont font-semibold text-gray-300 hover:text-white cursor-pointer duration-300">
-              Privacy
+              보안
             </p>
             <p className="text-sm font-titleFont font-semibold text-gray-300 hover:text-white cursor-pointer duration-300">
-              Security
+              궁금한점
             </p>
           </div>
         </div>
@@ -132,20 +128,19 @@ const SignIn = () => {
           <form className="w-full lgl:w-[450px] h-screen flex items-center justify-center">
             <div className="px-6 py-4 w-full h-[90%] flex flex-col justify-center overflow-y-scroll scrollbar-thin scrollbar-thumb-primeColor">
               <h1 className="font-titleFont underline underline-offset-4 decoration-[1px] font-semibold text-3xl mdl:text-4xl mb-4">
-                Sign in
+                로그인
               </h1>
               <div className="flex flex-col gap-3">
-                {/* Email */}
                 <div className="flex flex-col gap-.5">
                   <p className="font-titleFont text-base font-semibold text-gray-600">
-                    Work Email
+                    이메일
                   </p>
                   <input
                     onChange={handleEmail}
                     value={email}
                     className="w-full h-8 placeholder:text-sm placeholder:tracking-wide px-4 text-base font-medium placeholder:font-normal rounded-md border-[1px] border-gray-400 outline-none"
                     type="email"
-                    placeholder="john@workemail.com"
+                    placeholder="Hong@gil.dong"
                   />
                   {errEmail && (
                     <p className="text-sm text-red-500 font-titleFont font-semibold px-4">
@@ -155,7 +150,7 @@ const SignIn = () => {
                   )}
                 </div>
 
-                {/* Password */}
+
                 <div className="flex flex-col gap-.5">
                   <p className="font-titleFont text-base font-semibold text-gray-600">
                     Password
@@ -165,7 +160,7 @@ const SignIn = () => {
                     value={password}
                     className="w-full h-8 placeholder:text-sm placeholder:tracking-wide px-4 text-base font-medium placeholder:font-normal rounded-md border-[1px] border-gray-400 outline-none"
                     type="password"
-                    placeholder="Create password"
+                    placeholder="비밀번호 입력"
                   />
                   {errPassword && (
                     <p className="text-sm text-red-500 font-titleFont font-semibold px-4">
@@ -179,13 +174,13 @@ const SignIn = () => {
                   onClick={handleSignUp}
                   className="bg-primeColor hover:bg-black text-gray-200 hover:text-white cursor-pointer w-full text-base font-medium h-10 rounded-md  duration-300"
                 >
-                  Sign In
+                  로그인
                 </button>
                 <p className="text-sm text-center font-titleFont font-medium">
-                  Don't have an Account?{" "}
+                  아이디 새로생성{" "}
                   <Link to="/signup">
                     <span className="hover:text-blue-600 duration-300">
-                      Sign up
+                      ㅁ회원가입ㅁ
                     </span>
                   </Link>
                 </p>

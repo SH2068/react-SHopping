@@ -18,9 +18,9 @@ const Footer = () => {
 
   const handleSubscription = () => {
     if (emailInfo === "") {
-      setErrMsg("Please provide an Email !");
+      setErrMsg("이메일을 입력해 주세요 !");
     } else if (!emailValidation(emailInfo)) {
-      setErrMsg("Please give a valid Email!");
+      setErrMsg("유효한 이메일을 입력해 주세요 !");
     } else {
       setSubscription(true);
       setErrMsg("");
@@ -28,18 +28,18 @@ const Footer = () => {
     }
   };
   return (
-    <div className="w-full bg-[#F5F5F3] py-20">
+    <div className="w-full bg-[#eee] py-20">
       <div className="max-w-container mx-auto grid grid-cols-1 md:grid-cols-2  xl:grid-cols-6 px-4 gap-10">
         <div className="col-span-2">
-          <FooterListTitle title=" More about Orebi Shop" />
+          <FooterListTitle title=" Happy shooping" />
           <div className="flex flex-col gap-6">
             <p className="text-base w-full xl:w-[80%]">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim sint
-              ab ullam, numquam nesciunt in.
+            고객님의 피드백은 제품 지원 사이트를 개선하는 데 도움이 됩니다.
+            오늘 방문하신 웹사이트에 대한 고객님의 경험을 들려주세요.
             </p>
             <ul className="flex items-center gap-2">
               <a
-                href="https://www.youtube.com/@reactjsBD"
+                href="https://www.youtube.com"
                 target="_blank"
                 rel="noreferrer"
               >
@@ -48,7 +48,7 @@ const Footer = () => {
                 </li>
               </a>
               <a
-                href="https://github.com/noorjsdivs"
+                href="https://github.com"
                 target="_blank"
                 rel="noreferrer"
               >
@@ -57,7 +57,7 @@ const Footer = () => {
                 </li>
               </a>
               <a
-                href="https://www.facebook.com/Noorlalu143/"
+                href="https://www.facebook.com"
                 target="_blank"
                 rel="noreferrer"
               >
@@ -66,7 +66,7 @@ const Footer = () => {
                 </li>
               </a>
               <a
-                href="https://www.linkedin.com/in/noor-mohammad-ab2245193/"
+                href="https://www.linkedin.com"
                 target="_blank"
                 rel="noreferrer"
               >
@@ -78,50 +78,47 @@ const Footer = () => {
           </div>
         </div>
         <div>
-          <FooterListTitle title="Shop" />
+          <FooterListTitle title="SHOP" />
           <ul className="flex flex-col gap-2">
             <li className="font-titleFont text-base text-lightText hover:text-black hover:underline decoration-[1px] decoration-gray-500 underline-offset-2 cursor-pointer duration-300">
-              Accesories
+              액세서리
             </li>
             <li className="font-titleFont text-base text-lightText hover:text-black hover:underline decoration-[1px] decoration-gray-500 underline-offset-2 cursor-pointer duration-300">
-              Clothes
+              의류
             </li>
             <li className="font-titleFont text-base text-lightText hover:text-black hover:underline decoration-[1px] decoration-gray-500 underline-offset-2 cursor-pointer duration-300">
-              Electronics
+              전자 제품
             </li>
             <li className="font-titleFont text-base text-lightText hover:text-black hover:underline decoration-[1px] decoration-gray-500 underline-offset-2 cursor-pointer duration-300">
-              Home appliances
+              가전 제품
             </li>
             <li className="font-titleFont text-base text-lightText hover:text-black hover:underline decoration-[1px] decoration-gray-500 underline-offset-2 cursor-pointer duration-300">
-              New Arrivals
+              신규 제품
             </li>
           </ul>
         </div>
         <div>
-          <FooterListTitle title="Your account" />
+          <FooterListTitle title="계정 관련" />
           <ul className="flex flex-col gap-2">
             <li className="font-titleFont text-base text-lightText hover:text-black hover:underline decoration-[1px] decoration-gray-500 underline-offset-2 cursor-pointer duration-300">
-              Profile
+              프로필
             </li>
             <li className="font-titleFont text-base text-lightText hover:text-black hover:underline decoration-[1px] decoration-gray-500 underline-offset-2 cursor-pointer duration-300">
-              Orders
+              주문
             </li>
             <li className="font-titleFont text-base text-lightText hover:text-black hover:underline decoration-[1px] decoration-gray-500 underline-offset-2 cursor-pointer duration-300">
-              Addresses
+              장소 찾아가기
             </li>
             <li className="font-titleFont text-base text-lightText hover:text-black hover:underline decoration-[1px] decoration-gray-500 underline-offset-2 cursor-pointer duration-300">
-              Account Details
-            </li>
-            <li className="font-titleFont text-base text-lightText hover:text-black hover:underline decoration-[1px] decoration-gray-500 underline-offset-2 cursor-pointer duration-300">
-              Payment Options
+              회사 정보
             </li>
           </ul>
         </div>
         <div className="col-span-2 flex flex-col items-center w-full px-4">
-          <FooterListTitle title="Subscribe to our newsletter." />
+          {/* 추각 글 적고싶으면 아래로 */}
           <div className="w-full">
             <p className="text-center mb-4">
-              A at pellentesque et mattis porta enim elementum.
+            당신의 백화점을 더욱 특별하게 만들어 드릴게요
             </p>
             {subscription ? (
               <motion.p
@@ -130,7 +127,7 @@ const Footer = () => {
                 transition={{ duration: 0.5 }}
                 className="w-full text-center text-base font-titleFont font-semibold text-green-600"
               >
-                Subscribed Successfully !
+                완료 되었습니다!
               </motion.p>
             ) : (
               <div className="w-full flex-col xl:flex-row flex justify-between items-center gap-4">
@@ -140,7 +137,7 @@ const Footer = () => {
                     value={emailInfo}
                     className="w-full h-12 border-b border-gray-400 bg-transparent px-4 text-primeColor text-lg placeholder:text-base outline-none"
                     type="text"
-                    placeholder="Insert your email ...*"
+                    placeholder="이메일 작성 칸"
                   />
                   {errMsg && (
                     <p className="text-red-600 text-sm font-semibold font-titleFont text-center animate-bounce mt-2">
@@ -152,7 +149,7 @@ const Footer = () => {
                   onClick={handleSubscription}
                   className="bg-white text-lightText w-[30%] h-10 hover:bg-black hover:text-white duration-300 text-base tracking-wide"
                 >
-                  Subscribe
+                  버튼
                 </button>
               </div>
             )}

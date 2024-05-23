@@ -59,51 +59,50 @@ const SignUp = () => {
     setZip(e.target.value);
     setErrZip("");
   };
-  // ============= Event Handler End here ===============
-  // ================= Email Validation start here =============
+
   const EmailValidation = (email) => {
     return String(email)
       .toLowerCase()
       .match(/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i);
   };
-  // ================= Email Validation End here ===============
+
 
   const handleSignUp = (e) => {
     e.preventDefault();
     if (checked) {
       if (!clientName) {
-        setErrClientName("Enter your name");
+        setErrClientName("이름을 적어주세요");
       }
       if (!email) {
-        setErrEmail("Enter your email");
+        setErrEmail("이메일을 적어주세요");
       } else {
         if (!EmailValidation(email)) {
-          setErrEmail("Enter a Valid email");
+          setErrEmail("유효한 이메일을 적어주세요");
         }
       }
       if (!phone) {
-        setErrPhone("Enter your phone number");
+        setErrPhone("휴대폰 번호를 적어주세요");
       }
       if (!password) {
-        setErrPassword("Create a password");
+        setErrPassword("비밀번호를 생성하세요");
       } else {
         if (password.length < 6) {
-          setErrPassword("Passwords must be at least 6 characters");
+          setErrPassword("비밀번호는 6자 이상이어야 합니다.");
         }
       }
       if (!address) {
-        setErrAddress("Enter your address");
+        setErrAddress("주소를 기입해주세요");
       }
       if (!city) {
-        setErrCity("Enter your city name");
+        setErrCity("도시명을 적어주세요");
       }
       if (!country) {
-        setErrCountry("Enter the country you are residing");
+        setErrCountry("거주 국가를 입력합니다.");
       }
       if (!zip) {
-        setErrZip("Enter the zip code of your area");
+        setErrZip("해당 지역의 우편번호를 입력하세요.");
       }
-      // ============== Getting the value ==============
+
       if (
         clientName &&
         email &&
@@ -116,7 +115,7 @@ const SignUp = () => {
         zip
       ) {
         setSuccessMsg(
-          `Hello dear ${clientName}, Welcome you to OREBI Admin panel. We received your Sign up request. We are processing to validate your access. Till then stay connected and additional assistance will be sent to you by your mail at ${email}`
+          `환영합니다 ${clientName}, SHopping 에 오신 것을 환영합니다. 가입요청받았으니 잠시만 기다려주세요 작성하신 메일로 코드가 발송됩니다 ${email}`
         );
         setClientName("");
         setEmail("");
@@ -138,7 +137,7 @@ const SignUp = () => {
           </Link>
           <div className="flex flex-col gap-1 -mt-1">
             <h1 className="font-titleFont text-xl font-medium">
-              Get started for free
+              로그인은 공짜
             </h1>
             <p className="text-base">Create your account to access more</p>
           </div>
@@ -148,11 +147,10 @@ const SignUp = () => {
             </span>
             <p className="text-base text-gray-300">
               <span className="text-white font-semibold font-titleFont">
-                Get started fast with OREBI
+                SHopping과 함께하세요
               </span>
               <br />
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab omnis
-              nisi dolor recusandae consectetur!
+              사인칸
             </p>
           </div>
           <div className="w-[300px] flex items-start gap-3">
@@ -161,11 +159,10 @@ const SignUp = () => {
             </span>
             <p className="text-base text-gray-300">
               <span className="text-white font-semibold font-titleFont">
-                Access all OREBI services
+                SHopping의 혜택을 받아보세요
               </span>
               <br />
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab omnis
-              nisi dolor recusandae consectetur!
+              사인칸
             </p>
           </div>
           <div className="w-[300px] flex items-start gap-3">
@@ -174,25 +171,24 @@ const SignUp = () => {
             </span>
             <p className="text-base text-gray-300">
               <span className="text-white font-semibold font-titleFont">
-                Trusted by online Shoppers
+                믿어보십쇼
               </span>
               <br />
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab omnis
-              nisi dolor recusandae consectetur!
+              사인칸
             </p>
           </div>
           <div className="flex items-center justify-between mt-10">
             <p className="text-sm font-titleFont font-semibold text-gray-300 hover:text-white cursor-pointer duration-300">
-              © OREBI
+              SHopping
             </p>
             <p className="text-sm font-titleFont font-semibold text-gray-300 hover:text-white cursor-pointer duration-300">
-              Terms
+              정보
             </p>
             <p className="text-sm font-titleFont font-semibold text-gray-300 hover:text-white cursor-pointer duration-300">
-              Privacy
+              보안
             </p>
             <p className="text-sm font-titleFont font-semibold text-gray-300 hover:text-white cursor-pointer duration-300">
-              Security
+              궁금한점
             </p>
           </div>
         </div>
@@ -208,7 +204,7 @@ const SignUp = () => {
                 className="w-full h-10 bg-primeColor rounded-md text-gray-200 text-base font-titleFont font-semibold 
             tracking-wide hover:bg-black hover:text-white duration-300"
               >
-                Sign in
+                로그인
               </button>
             </Link>
           </div>
@@ -216,20 +212,20 @@ const SignUp = () => {
           <form className="w-full lgl:w-[500px] h-screen flex items-center justify-center">
             <div className="px-6 py-4 w-full h-[96%] flex flex-col justify-start overflow-y-scroll scrollbar-thin scrollbar-thumb-primeColor">
               <h1 className="font-titleFont underline underline-offset-4 decoration-[1px] font-semibold text-2xl mdl:text-3xl mb-4">
-                Create your account
+                계정을 생성하세요
               </h1>
               <div className="flex flex-col gap-3">
-                {/* client name */}
+
                 <div className="flex flex-col gap-.5">
                   <p className="font-titleFont text-base font-semibold text-gray-600">
-                    Full Name
+                    이름
                   </p>
                   <input
                     onChange={handleName}
                     value={clientName}
                     className="w-full h-8 placeholder:text-sm placeholder:tracking-wide px-4 text-base font-medium placeholder:font-normal rounded-md border-[1px] border-gray-400 outline-none"
                     type="text"
-                    placeholder="eg. John Doe"
+                    placeholder="ex) SEO HAN"
                   />
                   {errClientName && (
                     <p className="text-sm text-red-500 font-titleFont font-semibold px-4">
@@ -238,17 +234,17 @@ const SignUp = () => {
                     </p>
                   )}
                 </div>
-                {/* Email */}
+
                 <div className="flex flex-col gap-.5">
                   <p className="font-titleFont text-base font-semibold text-gray-600">
-                    Work Email
+                    이메일
                   </p>
                   <input
                     onChange={handleEmail}
                     value={email}
                     className="w-full h-8 placeholder:text-sm placeholder:tracking-wide px-4 text-base font-medium placeholder:font-normal rounded-md border-[1px] border-gray-400 outline-none"
                     type="email"
-                    placeholder="john@workemail.com"
+                    placeholder="Hong@gil.dong"
                   />
                   {errEmail && (
                     <p className="text-sm text-red-500 font-titleFont font-semibold px-4">
@@ -257,17 +253,17 @@ const SignUp = () => {
                     </p>
                   )}
                 </div>
-                {/* Phone Number */}
+
                 <div className="flex flex-col gap-.5">
                   <p className="font-titleFont text-base font-semibold text-gray-600">
-                    Phone Number
+                    휴대폰번호
                   </p>
                   <input
                     onChange={handlePhone}
                     value={phone}
                     className="w-full h-8 placeholder:text-sm placeholder:tracking-wide px-4 text-base font-medium placeholder:font-normal rounded-md border-[1px] border-gray-400 outline-none"
                     type="text"
-                    placeholder="008801234567891"
+                    placeholder="11441515"
                   />
                   {errPhone && (
                     <p className="text-sm text-red-500 font-titleFont font-semibold px-4">
@@ -276,17 +272,17 @@ const SignUp = () => {
                     </p>
                   )}
                 </div>
-                {/* Password */}
+
                 <div className="flex flex-col gap-.5">
                   <p className="font-titleFont text-base font-semibold text-gray-600">
-                    Password
+                    비밀번호
                   </p>
                   <input
                     onChange={handlePassword}
                     value={password}
                     className="w-full h-8 placeholder:text-sm placeholder:tracking-wide px-4 text-base font-medium placeholder:font-normal rounded-md border-[1px] border-gray-400 outline-none"
                     type="password"
-                    placeholder="Create password"
+                    placeholder="비밀번호를 생성하세요"
                   />
                   {errPassword && (
                     <p className="text-sm text-red-500 font-titleFont font-semibold px-4">
@@ -295,17 +291,17 @@ const SignUp = () => {
                     </p>
                   )}
                 </div>
-                {/* Address */}
+
                 <div className="flex flex-col gap-.5">
                   <p className="font-titleFont text-base font-semibold text-gray-600">
-                    Address
+                    주소
                   </p>
                   <input
                     onChange={handleAddress}
                     value={address}
                     className="w-full h-8 placeholder:text-sm placeholder:tracking-wide px-4 text-base font-medium placeholder:font-normal rounded-md border-[1px] border-gray-400 outline-none"
                     type="text"
-                    placeholder="road-001, house-115, example area"
+                    placeholder="Earth, South Korea"
                   />
                   {errAddress && (
                     <p className="text-sm text-red-500 font-titleFont font-semibold px-4">
@@ -317,14 +313,14 @@ const SignUp = () => {
                 {/* City */}
                 <div className="flex flex-col gap-.5">
                   <p className="font-titleFont text-base font-semibold text-gray-600">
-                    City
+                    도시명
                   </p>
                   <input
                     onChange={handleCity}
                     value={city}
                     className="w-full h-8 placeholder:text-sm placeholder:tracking-wide px-4 text-base font-medium placeholder:font-normal rounded-md border-[1px] border-gray-400 outline-none"
                     type="text"
-                    placeholder="Your city"
+                    placeholder="RPOK"
                   />
                   {errCity && (
                     <p className="text-sm text-red-500 font-titleFont font-semibold px-4">
@@ -336,14 +332,14 @@ const SignUp = () => {
                 {/* Country */}
                 <div className="flex flex-col gap-.5">
                   <p className="font-titleFont text-base font-semibold text-gray-600">
-                    Country
+                    우편번호
                   </p>
                   <input
                     onChange={handleCountry}
                     value={country}
                     className="w-full h-8 placeholder:text-sm placeholder:tracking-wide px-4 text-base font-medium placeholder:font-normal rounded-md border-[1px] border-gray-400 outline-none"
                     type="text"
-                    placeholder="Your country"
+                    placeholder="KO"
                   />
                   {errCountry && (
                     <p className="text-sm text-red-500 font-titleFont font-semibold px-4">
@@ -355,14 +351,14 @@ const SignUp = () => {
                 {/* Zip code */}
                 <div className="flex flex-col gap-.5">
                   <p className="font-titleFont text-base font-semibold text-gray-600">
-                    Zip/Postal code
+                    도로주소
                   </p>
                   <input
                     onChange={handleZip}
                     value={zip}
                     className="w-full h-8 placeholder:text-sm placeholder:tracking-wide px-4 text-base font-medium placeholder:font-normal rounded-md border-[1px] border-gray-400 outline-none"
                     type="text"
-                    placeholder="Your country"
+                    placeholder="--"
                   />
                   {errZip && (
                     <p className="text-sm text-red-500 font-titleFont font-semibold px-4">
@@ -371,7 +367,7 @@ const SignUp = () => {
                     </p>
                   )}
                 </div>
-                {/* Checkbox */}
+
                 <div className="flex items-start mdl:items-center gap-2">
                   <input
                     onChange={() => setChecked(!checked)}
@@ -379,9 +375,7 @@ const SignUp = () => {
                     type="checkbox"
                   />
                   <p className="text-sm text-primeColor">
-                    I agree to the OREBI{" "}
-                    <span className="text-blue-500">Terms of Service </span>and{" "}
-                    <span className="text-blue-500">Privacy Policy</span>.
+                    SHopping 서비스 약관 및 개인정보 취급방침에 동의합니다.{" "}
                   </p>
                 </div>
                 <button
@@ -392,13 +386,13 @@ const SignUp = () => {
                       : "bg-gray-500 hover:bg-gray-500 hover:text-gray-200 cursor-none"
                   } w-full text-gray-200 text-base font-medium h-10 rounded-md hover:text-white duration-300`}
                 >
-                  Create Account
+                  계정 생성
                 </button>
                 <p className="text-sm text-center font-titleFont font-medium">
-                  Don't have an Account?{" "}
+                  계정이 없으신가요?{" "}
                   <Link to="/signin">
                     <span className="hover:text-blue-600 duration-300">
-                      Sign in
+                      ㅁ회원가입ㅁ
                     </span>
                   </Link>
                 </p>

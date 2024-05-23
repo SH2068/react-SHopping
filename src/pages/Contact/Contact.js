@@ -13,11 +13,11 @@ const Contact = () => {
   const [email, setEmail] = useState("");
   const [messages, setMessages] = useState("");
 
-  // ========== Error Messages Start here ============
+
   const [errClientName, setErrClientName] = useState("");
   const [errEmail, setErrEmail] = useState("");
   const [errMessages, setErrMessages] = useState("");
-  // ========== Error Messages End here ==============
+
   const [successMsg, setSuccessMsg] = useState("");
 
   const handleName = (e) => {
@@ -33,13 +33,13 @@ const Contact = () => {
     setErrMessages("");
   };
 
-  // ================= Email Validation start here =============
+
   const EmailValidation = (email) => {
     return String(email)
       .toLowerCase()
       .match(/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i);
   };
-  // ================= Email Validation End here ===============
+
 
   const handlePost = (e) => {
     e.preventDefault();
@@ -76,7 +76,7 @@ const Contact = () => {
           <div className="w-[500px] h-auto py-6 flex flex-col gap-6">
             <div>
               <p className="text-base font-titleFont font-semibold px-2">
-                Name
+                이름
               </p>
               <input
                 onChange={handleName}
@@ -94,7 +94,7 @@ const Contact = () => {
             </div>
             <div>
               <p className="text-base font-titleFont font-semibold px-2">
-                Email
+                이메일
               </p>
               <input
                 onChange={handleEmail}
@@ -112,7 +112,7 @@ const Contact = () => {
             </div>
             <div>
               <p className="text-base font-titleFont font-semibold px-2">
-                Messages
+                메시지
               </p>
               <textarea
                 onChange={handleMessages}
@@ -134,7 +134,7 @@ const Contact = () => {
               onClick={handlePost}
               className="w-44 bg-primeColor text-gray-200 h-10 font-titleFont text-base tracking-wide font-semibold hover:bg-black hover:text-white duration-200"
             >
-              Post
+              우편
             </button>
           </div>
         </form>
